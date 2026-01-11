@@ -34,12 +34,18 @@ body {
   }
 
 h1 {
-    font-size: 70px;
+    font-size: 50px;
     color: #5C41BF;
     font-style: italic;
     font-weight: bolder;
     font-family: "Zalando Sans Expanded", sans-serif;
     font-variant-caps: all-small-caps;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4%;
+
+
 }
 
 .containernav {
@@ -57,7 +63,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 13%;
+    margin-top: 10%;
     background-color: #5C41BF;
     padding: 35px;
     font-size: 30px;
