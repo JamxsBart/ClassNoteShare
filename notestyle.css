@@ -6,7 +6,8 @@
 
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: rgb(255, 255, 255);
+    background-color: #2b2b2b;
+    overflow: hidden; /* Prevent body scroll */
 }
 
 h1 {
@@ -16,33 +17,57 @@ h1 {
 .section1 {
     background-color: rgb(236, 236, 236);
     padding: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    padding: 10px;
 }
 
 .section2 {
     background-color: rgb(214, 222, 222);
     padding: 15px;
+    position: fixed;
+    top: 60px; /* Adjust based on section1 height */
+    left: 0;
+    right: 0;
+    z-index: 200;
 }
 
 .section3 {
     background-color: rgb(255, 255, 255);
-    margin-top: 2%;
-    margin-left: 50px; /* Width of icon bar */
+    margin-left: 50px;
+    margin-top: 120px; /* Adjust based on section1 + section2 height */
+    height: calc(100vh - 180px); /* Full height minus header and toolbar */
+    overflow-y: auto;
+    overflow-x: hidden;
     transition: margin-left 0.3s ease;
 }
 
 .section4 {
-    margin-left: 50px; /* Width of icon bar */
-    transition: margin-left 0.3s ease;
+    margin-left: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
 }
 
-.section3.shifted-one,
+.section3.shifted-one {
+    margin-left: 300px;
+}
+
+.section3.shifted-two {
+    margin-left: 550px;
+}
+
 .section4.shifted-one {
-    margin-left: 300px; /* Icon bar + one panel width */
+    margin-left: 300px;
 }
 
-.section3.shifted-two,
 .section4.shifted-two {
-    margin-left: 550px; /* Icon bar + two panels width */
+    margin-left: 550px;
 }
 
 .saveoptions {
@@ -52,6 +77,7 @@ h1 {
 
 .filebar {
     margin-left: 5%;
+    margin-bottom: 15px;
 }
 
 select {
@@ -62,13 +88,16 @@ select {
 }
 
 .toolbar {
-    background-color: #fff;
+    background-color: #bbbbbb;
+    border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
+    border-left: #2b2b2b;
     padding: 10px 20px;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
     align-items: center;
+    transition: margin-left 0.3s ease;
 }
 
 .toolbar button {
@@ -95,7 +124,7 @@ select {
     max-width: 900px;
     margin: 20px auto;
     background-color: #fff;
-    min-height: 600px;
+    min-height: 100%;
     padding: 40px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
@@ -118,8 +147,8 @@ select {
     display: flex;
     position: fixed;
     left: 0;
-    top: 100px; /* Adjust based on your topbar height */
-    bottom: 0;
+    top: 120px; /* Adjust based on section1 + section2 height */
+    bottom: 60px; /* Adjust based on toolbar height */
     z-index: 100;
 }
 
@@ -129,8 +158,8 @@ select {
     display: flex;
     flex-direction: column;
     padding: 10px 0;
-    margin-top: 5px;
-
+    overflow: hidden; /* Prevent scrolling */
+    padding-top: 5px;
 }
 
 .icon-btn {
@@ -143,11 +172,11 @@ select {
     cursor: pointer;
     margin-bottom: 5px;
     transition: background-color 0.3s;
+    flex-shrink: 0; /* Prevent buttons from shrinking */
 }
 
 .icon-btn:hover {
     background-color: #404040;
-    
 }
 
 .icon-btn.active {
@@ -161,7 +190,6 @@ select {
     overflow-y: auto;
     overflow-x: hidden;
     transition: width 0.3s ease;
-    margin-top: 5px;
 }
 
 .sidebar-panel.active {
@@ -174,7 +202,6 @@ select {
     color: #333;
     font-size: 16px;
     margin-bottom: 15px;
-
 }
 
 .sidebar-panel ul {
@@ -200,4 +227,22 @@ select {
 .sidebar-panel li.active {
     background-color: #0078d4;
     color: #fff;
+}
+
+.sidebar-panel li button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 2px 5px;
+}
+
+.sidebar-panel li button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+.filebar {
+    font-family: "Smooch Sans", sans-serif;
+    ;
 }
