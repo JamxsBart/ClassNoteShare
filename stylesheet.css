@@ -55,10 +55,11 @@ h1 {
 
 .EnterCodeContainer {
     display: flex;
-    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
     margin-top: 13%;
-    margin-left: 40%;
-    margin-right: 40%;
+    margin-left: 38%;
+    margin-right: 38%;
     background-image: url(p1rrnr9zm3091.png);
     background-size: cover;
     padding: 35px;
@@ -72,5 +73,4 @@ form {
 }
 input {
     font-size: 75%;
-    margin-left: 5%;
 }
