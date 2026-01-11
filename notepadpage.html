@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes</title>
+    <link rel="stylesheet" href="notestyle.css">
     <script src="scripts.js"></script>
 </head>
 <body>
-    <section1>
+    <section class="section1">
         <div class="topbar">
             <a href="index.html">Home</a>
             <center><h1>ClassNoteShare</h1></center>
         </div>
-    </section1>
-    <section2>
+    </section>
+    
+    <section class="section2">
         <div class="filebar">
             <a href="#">File</a>
             <a href="#">Home</a>
@@ -32,8 +34,75 @@
               <option value="public">Public</option>
               <option value="private">Private</option>
             </select>
-    </section2>
-
+        </div>
+    </section>
+    
+    <section class="sidebar-container">
+        <div class="icon-bar">
+            <button class="icon-btn" onclick="toggleSidebar('notebooks')" title="Notebooks">
+                📚
+            </button>
+        </div>
+    
+        <!-- Notebooks panel -->
+        <div class="sidebar-panel" id="notebooks-panel">
+            <h3>Notebooks</h3>
+            <ul id="notebooks-list">
+                <li onclick="showPages('my-notebook')">My Notebook</li>
+                <li onclick="showPages('school-notes')">School Notes</li>
+                <li onclick="showPages('work-notes')">Work Notes</li>
+            </ul>
+        </div>
+    
+        <div class="sidebar-panel" id="pages-panel">
+            <h3 id="pages-title">Pages</h3>
+            <ul id="pages-list">
+            </ul>
+        </div>
+    </section>
+    
+    <section class="section3">
+        <div class="editor-container">
+            <div id="editor" contenteditable="true"></div>
+        </div>
+    </section>
+    
+    <section class="section4">
+        <div class="toolbar">
+            <select id="fontStyle">
+                <option value="Arial">Arial</option>
+                <option value="'Times New Roman'">Times New Roman</option>
+                <option value="'Courier New'">Courier New</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Verdana">Verdana</option>
+            </select>
+    
+            <select id="fontSize">
+                <option value="12px">12</option>
+                <option value="14px">14</option>
+                <option value="16px" selected>16</option>
+                <option value="18px">18</option>
+                <option value="20px">20</option>
+                <option value="24px">24</option>
+                <option value="32px">32</option>
+            </select>
+    
+            <button onclick="format('bold')"><b>B</b></button>
+            <button onclick="format('italic')"><i>I</i></button>
+            <button onclick="format('underline')"><u>U</u></button>
+            <button onclick="format('strikeThrough')"><s>S</s></button>
+    
+            <button onclick="format('justifyLeft')">Left</button>
+            <button onclick="format('justifyCenter')">Center</button>
+            <button onclick="format('justifyRight')">Right</button>
+    
+            <button onclick="format('insertUnorderedList')">• List</button>
+            <button onclick="format('insertOrderedList')">1. List</button>
+    
+            <input type="color" id="textColor" value="#000000" title="Text Color">
+            <input type="color" id="bgColor" value="#ffffff" title="Background Color">
+        </div>
+    </section>
 
 </body>
 </html>
