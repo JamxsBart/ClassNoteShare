@@ -22,12 +22,13 @@ document.addEventListener('DOMContentLoaded', function() {
     <title>${filename}</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: "Zalando Sans", sans-serif;
             padding: 40px;
             max-width: 900px;
             margin: 0 auto;
             line-height: 1.6;
             color: #333;
+            font-size; 12px;
         }
     </style>
 </head>
