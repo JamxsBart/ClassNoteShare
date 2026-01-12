@@ -38,8 +38,8 @@ a {
     left: 0;
     right: 0;
     z-index: 200;
-    padding-top: 11px;
-    padding-bottom: 11px;
+    padding-top: 13px;
+    padding-bottom: 13px;
     margin-top: -11px;
 }
 
@@ -150,7 +150,7 @@ a {
 
 select {
     float: right;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     margin-right: 2%;
     font-family: monospace;
@@ -313,7 +313,7 @@ select {
 }
 
 .menu-item {
-    font-size: 25px;
+    font-size: 20px;
     font-family: monospace;
 }
 
