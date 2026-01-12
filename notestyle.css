@@ -150,9 +150,12 @@ a {
 
 select {
     float: right;
-    font-size: 15px;
+    font-size: 25px;
     text-align: center;
     margin-right: 2%;
+    font-family: monospace;
+    background-color: #F2F2F2;
+
 }
 
 .toolbar {
@@ -312,5 +315,6 @@ select {
 
 .menu-item {
     font-size: 25px;
+    font-family: monospace;
 }
 
