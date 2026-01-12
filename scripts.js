@@ -247,9 +247,9 @@ function renderNotebooks() {
     });
     
     const addBtn = document.createElement('li');
-    addBtn.innerHTML = '<span style="color: #0078d4; font-weight: bold;">+ New Notebook</span>';
+    addBtn.innerHTML = '<span style="color: #5C41BF; font-weight: bold;">+ New Notebook</span>';
     addBtn.onclick = addNewNotebook;
-    addBtn.style.border = '2px dashed #0078d4';
+    addBtn.style.border = '2px dashed #5C41BF';
     notebooksList.appendChild(addBtn);
 }
 
@@ -357,9 +357,9 @@ function showPages(notebookId) {
     });
     
     const addBtn = document.createElement('li');
-    addBtn.innerHTML = '<span style="color: #0078d4; font-weight: bold;">+ New Page</span>';
+    addBtn.innerHTML = '<span style="color: #5C41BF; font-weight: bold;">+ New Page</span>';
     addBtn.onclick = () => addNewPage(notebookId);
-    addBtn.style.border = '2px dashed #0078d4';
+    addBtn.style.border = '2px dashed #5C41BF';
     pagesList.appendChild(addBtn);
     
     pagesPanel.classList.add('active');
