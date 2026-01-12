@@ -121,7 +121,6 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// Insert functions
 function insertImage() {
     const url = prompt('Enter image URL:');
     if (url) {
@@ -188,7 +187,6 @@ function showHelp() {
     document.getElementById('help-menu').classList.remove('active');
 }
 
-// Sidebar functionality
 let activeSidebar = null;
 let activeNotebook = null;
 let currentNotebook = null;
@@ -236,7 +234,6 @@ function renderNotebooks() {
     const notebooksList = document.getElementById('notebooks-list');
     notebooksList.innerHTML = '';
     
-    // Render each notebook
     Object.keys(window.notebooksData).forEach(notebookId => {
         const notebook = window.notebooksData[notebookId];
         const li = document.createElement('li');

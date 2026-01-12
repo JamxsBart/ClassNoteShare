@@ -7,7 +7,7 @@
 body {
     font-family: monospace;
     background-color: #2b2b2b;
-    overflow: hidden; /* Prevent body scroll */
+    overflow: hidden; 
 }
 
 h1 {
@@ -34,7 +34,7 @@ a {
 .section2 {
     background-color: #F2F2F2;
     position: fixed;
-    top: 60px; /* Adjust based on section1 height */
+    top: 60px; 
     left: 0;
     right: 0;
     z-index: 200;
@@ -46,8 +46,8 @@ a {
 .section3 {
     background-color: rgb(255, 255, 255);
     margin-left: 50px;
-    margin-top: 120px; /* Adjust based on section1 + section2 height */
-    height: calc(100vh - 180px); /* Full height minus header and toolbar */
+    margin-top: 120px; 
+    height: calc(100vh - 180px); 
     overflow-y: auto;
     overflow-x: hidden;
     transition: margin-left 0.3s ease;
@@ -213,13 +213,12 @@ select {
     color: #999;
 }
 
-/* Sidebar styles */
 .sidebar-container {
     display: flex;
     position: fixed;
     left: 0;
-    top: 120px; /* Adjust based on section1 + section2 height */
-    bottom: 60px; /* Adjust based on toolbar height */
+    top: 120px; 
+    bottom: 60px; 
     z-index: 100;
 }
 
@@ -229,7 +228,7 @@ select {
     display: flex;
     flex-direction: column;
     padding: 10px 0;
-    overflow: hidden; /* Prevent scrolling */
+    overflow: hidden; 
     padding-top: 5px;
 }
 
@@ -243,8 +242,7 @@ select {
     cursor: pointer;
     margin-bottom: 5px;
     transition: background-color 0.3s;
-    flex-shrink: 0; /* Prevent buttons from shrinking */
-}
+    flex-shrink: 0; 
 
 .icon-btn:hover {
     background-color: #2b2b2b;
@@ -317,4 +315,4 @@ select {
     font-size: 25px;
     font-family: monospace;
 }
-
+}
