@@ -191,7 +191,7 @@ select {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 3px;
-    font-size: calc(0.2vw + 0.8vh);
+    font-size: calc(0.35vw + 0.8vh);
 }
 
 .editor-container {
