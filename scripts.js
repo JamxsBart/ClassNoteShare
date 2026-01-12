@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const saveOptions = document.getElementById('Saveoptions');
-    const privacyDropdown = document.getElementById('PrivacyOptions');
     const editor = document.getElementById('editor');
     
-    console.log('Script loaded', saveOptions, privacyDropdown);
+    console.log('Script loaded', saveOptions);
     
     saveOptions.addEventListener('change', function(e) {
       const action = this.value;
@@ -54,22 +53,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const shareUrl = window.location.href;
         prompt('Share this URL:', shareUrl);
       } 
-      else if (action === 'privacy') {
-        console.log('Showing privacy dropdown');
-        privacyDropdown.style.display = 'inline-block';
-      }
       
       this.value = '';
     });
     
-    privacyDropdown.addEventListener('change', function() {
-      const privacySetting = this.value;
-      console.log('Privacy set to:', privacySetting);
-      alert('Privacy set to ' + privacySetting);
-      
-      this.value = '';
-      this.style.display = 'none';
-    });
+
 
     const fontStyle = document.getElementById('fontStyle');
     const fontSize = document.getElementById('fontSize');
