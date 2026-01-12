@@ -13,6 +13,8 @@ body {
     justify-content: center;
     display: flex;
     padding-bottom: 5%;
+    margin-bottom: 5%;
+    justify-items: center;
   }
   
   .topnav a {
@@ -57,7 +59,11 @@ h1 {
     display: flex;
     margin: 0 auto;
     width: 100vw;
-    background-color: #E7DFF2;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
 
 }
 
@@ -65,39 +71,103 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
-    margin-top: 3%;
+    background-color: #5C41BF;
     padding: 35px;
     font-size: 30px;
-    border-radius: 5%;
     min-width:auto;
     width: 20%;
+    border-style: double;
+
 }
 
 
 form {
-    color: #000000;    
+    color: #fcfcfc;    
     font-size: 100%;
     align-items: center;
     font-family: monospace;
     font-weight: 600;
-    margin-bottom: 50%;
 }
 
 button {
   font-family: monospace;
-  background-color: #000000;
+  background-color: #7c69bf;
   color: #ffffff;
   padding: 10px;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
-.preview {
-  margin-top: 50px;
+.Preview {
+  margin-top: 200px;
 }
 
 .aboutme {
   margin-top: 10%;
 }
 
+.panel {
+  border-left: #000000;
+  border-right: #000000;
+  border-style:groove;
+  width: 20%;
+  padding: 35px;
 
+}
+
+.featurereview {
+  margin-top: 2%;
+}
+
+.feature {
+  margin-top: 8%;
+}
+
+ul {
+  align-items: center;
+  -moz-column-count: 2;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+  column-count: 2;
+  column-gap: 25px;
+  justify-content: center;
+  display: flex;
+}
+
+.notepad2 {
+  align-items: center;
+  justify-items: center;
+}
+
+.container2 {
+
+  display: flex;
+  gap: 20px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  margin: 0 auto;
+  border: #000000;
+  border-style: groove;
+  box-shadow: 10px 15px #5C41BF;
+}
+
+.section2 {
+  background-color: #ffffff;
+  padding: 100px;
+  padding-bottom: 340px;
+  padding-top: 340px;
+}
+
+h5 {
+  font-size: 50px;
+}
+p {
+  font-size: 40px;
+  margin-top: -3%;
+}
+
+.text {
+  margin-top: -3%;
+}

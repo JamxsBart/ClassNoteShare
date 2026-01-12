@@ -5,43 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClassNoteShare</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="homescript.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-
 </head>
 <body>
+
     <div class="containernav">
         <div class="topnav">
             <a class="active" href="#home">Home</a>
-            <a href="notepadpage.html" onclick="scrollToModels1()">Notepad</a>
-            <a href="#about" onclick="scrollToModels2()">Roadmap</a>
-            <a href="#contact">About us</a>
-
+            <a href="notepadpage.html">Notepad </a>
+            <a href="#about" onclick="scrollToModels3()">Roadmap</a>
+            <a href="#OurGoals" onclick="scrollToModels2()">Our Goals</a>
         </div>
     </div>
-    <Center><h1>ThoughtNotes</h1></Center>
-    <center><h2>Simple Local NotePad</h2></center>
+<section class="notepad2">
+    <div class="panel">
+        <Center><h1>ThoughtNotes</h1></Center>
+        <center><h2>Simple Local NotePad</h2></center>
+    </div>
 
 
-
-    <center><div class="EnterCodeContainer">
+    <div class="EnterCodeContainer">
         <form action="notepadpage.html">
-            <center><label for="RoomCode">Enter App</label></center>
+            <center><label for="RoomCode">Start Typing</label></center>
             <center><button>Open App</button><center></center>
         </form>
-    </div></center>
-   
+    </div>
+</section>
+
+<section class="feature">
+    <center><h4>Feature List</h4><br></center>
+    <ul class="featurereview">
+        <li>Code Input</li>
+        <li>Multiple Notebooks</li>
+        <li>Sorting Options</li>
+        <li>Import Links</li>
+        <li>Custom Fonts/formatting</li>
+
+
+
+    </ul>
+</section>
 
 <section class="Preview">
     <img src="Screenshot 2026-01-12 at 11.20.02.png" alt="" width="50%">
 </section>
 
-<section class="aboutme">
-    <center>
-        <h3>About me</h3>
-    </center>
-
+<section id="section2" class="section2"> 
+    <div id="container4" class="container2">
+        <div class="text">
+            <h5>Our Goal:</h5>
+            <p>"Our goals are to bring accessable and local notepads to students without the need for data capture and input of your personal details, all notes are fully anonymous and unseen by anyone but your device. 🎭"</p>
+        </div>
+    </div>
 </section>
 
 
