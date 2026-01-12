@@ -12,10 +12,11 @@ body {
 
 h1 {
     font-size: 25px;
+    color: #000000;
 }
 
 .section1 {
-    background-color: rgb(236, 236, 236);
+    background-color: #F2F2F2;
     padding: 5px;
     position: fixed;
     top: 0;
@@ -23,16 +24,19 @@ h1 {
     right: 0;
     z-index: 200;
     padding: 10px;
+    text-align: center;
 }
 
 .section2 {
-    background-color: rgb(214, 222, 222);
-    padding: 15px;
+    background-color: #F2F2F2;
     position: fixed;
     top: 60px; /* Adjust based on section1 height */
     left: 0;
     right: 0;
     z-index: 200;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    margin-top: -11px;
 }
 
 .section3 {
@@ -76,8 +80,70 @@ h1 {
 }
 
 .filebar {
+    font-family: "Smooch Sans", sans-serif;
     margin-left: 5%;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item > a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 15px;
+    display: inline-block;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    border-radius: 3px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.menu-item > a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    z-index: 1000;
+    margin-top: 5px;
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+.dropdown-menu button {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    background: white;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-menu button:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu button:hover {
+    background-color: #f5f5f5;
 }
 
 select {
@@ -176,7 +242,7 @@ select {
 }
 
 .icon-btn:hover {
-    background-color: #404040;
+    background-color: #2b2b2b;
 }
 
 .icon-btn.active {
@@ -242,7 +308,7 @@ select {
     border-radius: 3px;
 }
 
-.filebar {
-    font-family: "Smooch Sans", sans-serif;
-    ;
+.menu-item {
+    font-size: 25px;
 }
+

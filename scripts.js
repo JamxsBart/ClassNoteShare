@@ -109,6 +109,98 @@ document.addEventListener('DOMContentLoaded', function() {
     renderNotebooks();
 });
 
+// Menu toggle functionality
+function toggleMenu(menuId) {
+    const menu = document.getElementById(menuId);
+    const allMenus = document.querySelectorAll('.dropdown-menu');
+    
+    // Close all other menus
+    allMenus.forEach(m => {
+        if (m.id !== menuId) {
+            m.classList.remove('active');
+        }
+    });
+    
+    // Toggle the clicked menu
+    menu.classList.toggle('active');
+}
+
+// Close menus when clicking outside
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.menu-item')) {
+        const allMenus = document.querySelectorAll('.dropdown-menu');
+        allMenus.forEach(m => m.classList.remove('active'));
+    }
+});
+
+// Insert functions
+function insertImage() {
+    const url = prompt('Enter image URL:');
+    if (url) {
+        document.execCommand('insertImage', false, url);
+    }
+    document.getElementById('insert-menu').classList.remove('active');
+}
+
+function insertLink() {
+    const url = prompt('Enter link URL:');
+    if (url) {
+        document.execCommand('createLink', false, url);
+    }
+    document.getElementById('insert-menu').classList.remove('active');
+}
+
+function insertFile() {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.pdf,.doc,.docx,.txt';
+    input.onchange = function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            const editor = document.getElementById('editor');
+            const link = document.createElement('a');
+            link.href = '#';
+            link.textContent = '📎 ' + file.name;
+            link.style.color = '#0078d4';
+            link.style.textDecoration = 'underline';
+            editor.appendChild(link);
+            editor.appendChild(document.createElement('br'));
+        }
+    };
+    input.click();
+    document.getElementById('insert-menu').classList.remove('active');
+}
+
+function insertCodeBlock() {
+    const code = prompt('Enter code:');
+    if (code) {
+        const editor = document.getElementById('editor');
+        const pre = document.createElement('pre');
+        pre.style.backgroundColor = '#f5f5f5';
+        pre.style.padding = '10px';
+        pre.style.borderRadius = '5px';
+        pre.style.fontFamily = 'Courier New, monospace';
+        pre.style.overflow = 'auto';
+        const codeElement = document.createElement('code');
+        codeElement.textContent = code;
+        pre.appendChild(codeElement);
+        editor.appendChild(pre);
+        editor.appendChild(document.createElement('br'));
+    }
+    document.getElementById('code-menu').classList.remove('active');
+}
+
+function contactUs() {
+    alert('Contact us at: support@classnoteshare.com');
+    document.getElementById('help-menu').classList.remove('active');
+}
+
+function showHelp() {
+    alert('Help Guide:\n\n1. Use the toolbar to format text\n2. Click Insert to add images, links, or files\n3. Use the sidebar to organize notebooks and pages\n4. Your work auto-saves as you type');
+    document.getElementById('help-menu').classList.remove('active');
+}
+
+// Sidebar functionality
 let activeSidebar = null;
 let activeNotebook = null;
 let currentNotebook = null;

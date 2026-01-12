@@ -6,22 +6,44 @@
     <title>Notes</title>
     <link rel="stylesheet" href="notestyle.css">
     <script src="scripts.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <section class="section1">
         <div class="topbar">
-            <a href="index.html">Home</a>
-            <center><h1>ClassNoteShare</h1></center>
+            <a href="index.html"><h1>ClassNoteShare</h1></a>
         </div>
     </section>
     
     <section class="section2">
         <div class="filebar">
-            <a href="#">File</a>
-            <a href="#">Home</a>
-            <a href="#">Insert</a>
-            <a href="#">Code</a>
-            <a href="#">Help</a>
+            <div class="menu-item">
+                <a href="#" onclick="toggleMenu('insert-menu'); return false;">Insert</a>
+                <div class="dropdown-menu" id="insert-menu">
+                    <button onclick="insertImage()">📷 Insert Image</button>
+                    <button onclick="insertLink()">🔗 Insert Link</button>
+                    <button onclick="insertFile()">📎 Insert File</button>
+                </div>
+            </div>
+            
+            <div class="menu-item">
+                <a href="#" onclick="toggleMenu('code-menu'); return false;">Code</a>
+                <div class="dropdown-menu" id="code-menu">
+                    <button onclick="insertCodeBlock()">💻 Code Block</button>
+                    <button onclick="format('fontName', 'Courier New')">🔤 Monospace Font</button>
+                </div>
+            </div>
+            
+            <div class="menu-item">
+                <a href="#" onclick="toggleMenu('help-menu'); return false;">Help</a>
+                <div class="dropdown-menu" id="help-menu">
+                    <button onclick="contactUs()">📧 Contact Us</button>
+                    <button onclick="showHelp()">❓ Help Guide</button>
+                </div>
+            </div>
+            
             <select name="Saveoptions" id="Saveoptions">
               <option value="" selected disabled hidden>Save/Share/Privacy</option>
               <option value="save">Save As</option>
